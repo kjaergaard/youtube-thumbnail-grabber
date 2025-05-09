@@ -107,3 +107,6 @@ Thumbs.db
 
 # Cline Memory Bank - Custom for this project's workflow
 memory-bank/
+
+# VS Code Local History extension
+.history/
