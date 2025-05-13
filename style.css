@@ -1,18 +1,23 @@
 /* Basic Reset */
+/* Apply basic reset to all elements */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
+/* Body Styles */
 body {
-    font-family: sans-serif;
-    line-height: 1.6;
+    font-family: sans-serif; /* Set a common sans-serif font */
+    line-height: 1.6; /* Set line height for better readability */
+    /* Add smooth transition for background color and text color changes (for theme switching) */
     transition: background-color 0.3s, color 0.3s;
 }
 
 /* Color Palette & Theme Variables */
+/* Define CSS variables for colors and theme-specific styles */
 :root {
+    /* Define a color palette using theme-specific names */
     --color-theme-1: #4086E3; /* Primary Action / Accent */
     --color-theme-2: #6140E3; /* Secondary Accent / Darker Tones */
     --color-theme-3: #4053E3; /* Alternative Accent */
@@ -20,170 +25,191 @@ body {
     --color-theme-5: #9640E3; /* Tertiary Accent / Special Elements */
     --color-theme-6: #8B96E3; /* Neutral / Background Tones */
 
-    /* Light Mode (Default) */
-    --bg-color: #f4f7f6;
-    --text-color: #333;
-    --header-bg: #fff;
-    --header-text: var(--color-theme-2);
-    --button-bg: var(--color-theme-1);
-    --button-text: #fff;
-    --input-bg: #fff;
-    --input-border: #ccc;
-    --placeholder-bg: #e9ecef;
-    --placeholder-text: #6c757d;
-    --footer-bg: #333;
-    --footer-text: #f4f7f6;
+    /* Light Mode (Default) Variables */
+    --bg-color: #f4f7f6; /* Background color */
+    --text-color: #333; /* Default text color */
+    --header-bg: #fff; /* Header background color */
+    --header-text: var(--color-theme-2); /* Header text color */
+    --button-bg: var(--color-theme-1); /* Button background color */
+    --button-text: #fff; /* Button text color */
+    --input-bg: #fff; /* Input field background color */
+    --input-border: #ccc; /* Input field border color */
+    --placeholder-bg: #e9ecef; /* Placeholder background color */
+    --placeholder-text: #6c757d; /* Placeholder text color */
+    --footer-bg: #333; /* Footer background color */
+    --footer-text: #f4f7f6; /* Footer text color */
 }
 
+/* Dark Mode Variables */
+/* Apply these variables when the data-theme attribute on the root element is "dark" */
 [data-theme="dark"] {
-    --bg-color: #1a1a2e;
-    --text-color: #e0e0e0;
-    --header-bg: #162447;
-    --header-text: var(--color-theme-4);
-    --button-bg: var(--color-theme-5);
-    --button-text: #e0e0e0;
-    --input-bg: #2f3b52;
-    --input-border: #4a5568;
-    --placeholder-bg: #2a3447;
-    --placeholder-text: #a0aec0;
-    --footer-bg: #162447;
-    --footer-text: #e0e0e0;
+    --bg-color: #1a1a2e; /* Dark mode background color */
+    --text-color: #e0e0e0; /* Dark mode text color */
+    --header-bg: #162447; /* Dark mode header background */
+    --header-text: var(--color-theme-4); /* Dark mode header text color */
+    --button-bg: var(--color-theme-5); /* Dark mode button background */
+    --button-text: #e0e0e0; /* Dark mode button text color */
+    --input-bg: #2f3b52; /* Dark mode input background */
+    --input-border: #4a5568; /* Dark mode input border */
+    --placeholder-bg: #2a3447; /* Dark mode placeholder background */
+    --placeholder-text: #a0aec0; /* Dark mode placeholder text */
+    --footer-bg: #162447; /* Dark mode footer background */
+    --footer-text: #e0e0e0; /* Dark mode footer text color */
 }
 
+/* Apply theme variables to the body */
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--bg-color); /* Use background color variable */
+    color: var(--text-color); /* Use text color variable */
 }
 
-/* Header */
+/* Header Styles */
 header {
-    background-color: var(--header-bg);
-    color: var(--header-text);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: var(--header-bg); /* Use header background color variable */
+    color: var(--header-text); /* Use header text color variable */
+    padding: 1rem 2rem; /* Add padding */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out header content */
+    align-items: center; /* Vertically align items */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add a subtle box shadow */
 }
 
 header h1 {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Set header title font size */
 }
 
+/* Theme Switcher Styles */
 .theme-switcher {
-    display: flex;
-    align-items: center;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
 }
 
 .theme-switcher label {
-    margin-right: 0.5rem;
+    margin-right: 0.5rem; /* Add space between label and toggle */
 }
 
-/* Main Content */
+/* Main Content Styles */
 main {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 2rem auto;
+    padding: 2rem; /* Add padding */
+    max-width: 800px; /* Set maximum width */
+    margin: 2rem auto; /* Center the main content block */
 }
 
+/* Section Styles */
 section {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: var(--header-bg); /* Using header-bg for section backgrounds for contrast */
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    margin-bottom: 2rem; /* Add bottom margin */
+    padding: 1.5rem; /* Add padding */
+    background-color: var(--header-bg); /* Use header-bg for section backgrounds for contrast */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Add a subtle box shadow */
 }
 
-/* Input Section */
+/* Input Section Styles */
 .input-section {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+    display: flex; /* Use flexbox for layout */
+    gap: 1rem; /* Add space between flex items */
+    align-items: center; /* Vertically align items */
 }
 
+/* YouTube URL Input Styles */
 #youtube-url {
-    flex-grow: 1;
-    padding: 0.75rem;
-    border: 1px solid var(--input-border);
-    border-radius: 4px;
-    background-color: var(--input-bg);
-    color: var(--text-color);
-    font-size: 1rem;
+    flex-grow: 1; /* Allow input to grow and fill available space */
+    padding: 0.75rem; /* Add padding */
+    border: 1px solid var(--input-border); /* Set border color */
+    border-radius: 4px; /* Add rounded corners */
+    background-color: var(--input-bg); /* Use input background color variable */
+    color: var(--text-color); /* Use text color variable */
+    font-size: 1rem; /* Set font size */
 }
 
+/* Button Styles (Generate and Thumbnail Controls) */
 #generate-btn, .thumbnail-controls button {
-    padding: 0.75rem 1.5rem;
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.2s;
+    padding: 0.75rem 1.5rem; /* Add padding */
+    background-color: var(--button-bg); /* Use button background color variable */
+    color: var(--button-text); /* Use button text color variable */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 1rem; /* Set font size */
+    transition: background-color 0.2s; /* Add transition for background color */
 }
 
+/* Button Hover Effect */
 #generate-btn:hover, .thumbnail-controls button:hover {
-    opacity: 0.9;
+    opacity: 0.9; /* Reduce opacity on hover */
 }
 
-/* Thumbnail Display */
+/* Thumbnail Display Section Styles */
+.thumbnail-display {
+    /* No specific styles needed here for layout, handled by child elements */
+}
+
+/* Thumbnail Placeholder Styles */
 .thumbnail-placeholder {
-    width: 100%;
-    min-height: 200px; /* Adjust as needed */
-    background-color: var(--placeholder-bg);
-    color: var(--placeholder-text);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-    text-align: center;
-    padding: 1rem;
+    width: 100%; /* Set width to 100% of parent */
+    min-height: 200px; /* Set minimum height */
+    background-color: var(--placeholder-bg); /* Use placeholder background color variable */
+    color: var(--placeholder-text); /* Use placeholder text color variable */
+    display: flex; /* Use flexbox for centering content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    border-radius: 4px; /* Add rounded corners */
+    margin-bottom: 1rem; /* Add bottom margin */
+    text-align: center; /* Center text */
+    padding: 1rem; /* Add padding */
 }
 
+/* Thumbnail Image Styles */
 .thumbnail-placeholder img {
-    max-width: 100%;
-    max-height: 400px; /* Adjust as needed */
-    border-radius: 4px;
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    max-height: 400px; /* Set maximum height */
+    border-radius: 4px; /* Add rounded corners */
 }
 
+/* Thumbnail Controls Styles */
 .thumbnail-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center buttons horizontally */
+    gap: 1rem; /* Add space between buttons */
 }
 
+/* Active Button Style in Thumbnail Controls */
 .thumbnail-controls button.active {
-    background-color: var(--color-theme-2); /* Using a different theme color for active state */
-    color: #fff;
+    background-color: var(--color-theme-2); /* Use a different theme color for active state */
+    color: #fff; /* Set text color to white */
 }
-/* Enhancements and Share Sections (Initially hidden) */
+
+/* Enhancements and Share Sections Styles (Initially hidden) */
+/* Styles for the heading within enhancements section */
 .enhancements-section h2 {
-    margin-bottom: 1rem;
-    color: var(--text-color);
+    margin-bottom: 1rem; /* Add bottom margin */
+    color: var(--text-color); /* Use text color variable */
 }
 
+/* Button Styles for Enhancements and Share sections */
 .enhancements-section button, .share-section button {
-    padding: 0.75rem 1.5rem;
-    background-color: var(--color-theme-3);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-right: 0.5rem;
-    transition: background-color 0.2s;
+    padding: 0.75rem 1.5rem; /* Add padding */
+    background-color: var(--color-theme-3); /* Use a theme color for background */
+    color: #fff; /* Set text color to white */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 1rem; /* Set font size */
+    margin-right: 0.5rem; /* Add right margin */
+    transition: background-color 0.2s; /* Add transition for background color */
 }
+
+/* Hover effect for Enhancements and Share buttons */
 .enhancements-section button:hover, .share-section button:hover {
-    opacity: 0.9;
+    opacity: 0.9; /* Reduce opacity on hover */
 }
 
 
-/* Footer */
+/* Footer Styles */
 footer {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: var(--footer-bg);
-    color: var(--footer-text);
-    margin-top: 2rem;
+    text-align: center; /* Center text */
+    padding: 1.5rem; /* Add padding */
+    background-color: var(--footer-bg); /* Use footer background color variable */
+    color: var(--footer-text); /* Use footer text color variable */
+    margin-top: 2rem; /* Add top margin */
 }

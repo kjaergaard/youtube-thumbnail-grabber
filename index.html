@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThumpNail - YouTube Thumbnail Enhancer</title>
+    <!-- Link to the stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>ThumpNail</h1>
+        <!-- Theme switcher for dark mode -->
         <div class="theme-switcher">
             <label for="theme-toggle">Dark Mode</label>
             <input type="checkbox" id="theme-toggle">
@@ -16,38 +18,45 @@
     </header>
 
     <main>
+        <!-- Section for YouTube URL input and generate button -->
         <section class="input-section">
             <input type="text" id="youtube-url" placeholder="Enter YouTube Video URL">
             <button id="generate-btn">Generate Thumbnail</button>
         </section>
 
+        <!-- Section to display the generated thumbnail -->
         <section class="thumbnail-display">
             <div class="thumbnail-placeholder" id="thumbnail-placeholder">
                 <p>Your enhanced thumbnail will appear here.</p>
                 <!-- Placeholder for actual image -->
                 <img src="#" alt="Generated Thumbnail" id="thumbnail-image" style="display:none;">
             </div>
+            <!-- Controls to switch between before and after views -->
             <div class="thumbnail-controls">
                 <button id="before-btn">Before</button>
                 <button id="after-btn" class="active">After</button>
             </div>
         </section>
 
+        <!-- Section for enhancement options (hidden initially) -->
         <section class="enhancements-section" style="display:none;"> <!-- Hidden for now -->
             <h2>Enhancements</h2>
             <button id="add-emoji-btn">Add Emoji</button>
             <button id="reposition-btn">Reposition Elements</button>
         </section>
 
+        <!-- Section for sharing options (hidden initially) -->
         <section class="share-section" style="display:none;"> <!-- Hidden for now -->
             <button id="share-btn">Share to Remove Watermark</button>
         </section>
     </main>
 
     <footer>
+        <!-- Footer with copyright information -->
         <p>&copy; 2025 ThumpNail - pimpmythumb.com (Coming Soon!)</p>
     </footer>
 
+    <!-- Link to the JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
